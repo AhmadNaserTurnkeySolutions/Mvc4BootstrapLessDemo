@@ -7,8 +7,8 @@
   
   public class ImportedFilePathResolver : IPathResolver
   {
-    private string currentFileDirectory;
-    private string currentFilePath;
+    private string _currentFileDirectory;
+    private string _currentFilePath;
 
     public ImportedFilePathResolver(string currentFilePath)
     {
@@ -20,11 +20,11 @@
     /// </summary>
     public string CurrentFilePath
     {
-      get { return currentFilePath; }
+      get { return _currentFilePath; }
       set
       {
-        currentFilePath = value;
-        currentFileDirectory = Path.GetDirectoryName(value);
+        _currentFilePath = value;
+        _currentFileDirectory = Path.GetDirectoryName(value);
       }
     }
 
@@ -47,7 +47,7 @@
       }
       else if (!Path.IsPathRooted(filePath))
       {
-        filePath = Path.Combine(currentFileDirectory, filePath);
+        filePath = Path.Combine(_currentFileDirectory, filePath);
       }
 
       return filePath;

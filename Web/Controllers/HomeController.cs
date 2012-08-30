@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace Mvc4BootstrapLessDemo.Controllers
 {
   public partial class HomeController : Controller
   {
-    //
-    // GET: /Home/
-
     public virtual ActionResult Index()
     {
+      ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+
       return View();
     }
-
   }
 }
