@@ -4,7 +4,7 @@
   using System.Web;
   using System.Web.Hosting;
   using dotless.Core.Input;
-  
+
   public class ImportedFilePathResolver : IPathResolver
   {
     private string _currentFileDirectory;
