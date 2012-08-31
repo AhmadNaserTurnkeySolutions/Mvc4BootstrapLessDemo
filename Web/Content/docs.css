@@ -21,7 +21,63 @@ h3 code {
   font-weight: normal;
 }
 
+/* box
+-------------------------------------------------- */
+.box {
+  background: -webkit-linear-gradient(top, #f1f1f1 0px, #ddd 100%);
+  border: 1px solid #EEE;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 0;
+}
+.box h4 {
+  line-height: 18px;
+  padding: 0;
+}
+.box .inner {
+  padding: 10px;
+}
 
+/* Login
+-------------------------------------------------- */
+#loginForm, #socialLoginForm {
+  height: 175px;
+  font-size: 12px !important;
+  text-shadow:0 1px 0 rgba(255,255,255,.5);
+
+  color: #888;
+  color: rgba(136, 136, 136, 0.5);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#loginForm .register-link a {
+  color: #08c;
+}
+#socialLoginForm button {
+  float: left;
+  margin-right: 5px;
+}
+
+/* Icons
+-------------------------------------------------- */
+.icon-google {
+  background-image: url(/Content/images/icon-google.png) !important;
+  background-position: 0 0;
+}
+.icon-twitter {
+  background-image: url(/Content/images/icon-twitter.png) !important;
+  background-position: 0 0;
+}
+.icon-facebook {
+  background-image: url(/Content/images/icon-facebook.png) !important;
+  background-position: 0 0;
+}
+.icon-microsoft {
+  background-image: url(/Content/images/icon-microsoft.png) !important;
+  background-position: 0 0;
+}
 
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
@@ -34,7 +90,7 @@ body > .navbar {
 body > .navbar .brand {
   padding-right: 0;
   padding-left: 0;
-  margin-left: 20px;
+  margin-right: 20px;
   float: left;
   font-weight: bold;
   color: #000;
@@ -186,7 +242,7 @@ hr.soften {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(images/bs-docs-masthead-pattern.png) repeat center center;
+  background: url(/Content/images/bs-docs-masthead-pattern.png) repeat center center;
   opacity: .4;
 }
 

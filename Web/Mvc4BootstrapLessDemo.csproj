@@ -184,6 +184,7 @@
     <Compile Include="HomeController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Extensions\HtmlExtensions.cs" />
     <Compile Include="Infrastructure\Extensions\UrlExtensions.cs" />
     <Compile Include="Infrastructure\Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Infrastructure\Optimization\ImportedFilePathResolver.cs" />
@@ -220,6 +221,10 @@
     <Content Include="Content\images\fleetio.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\icon-facebook.png" />
+    <Content Include="Content\images\icon-google.png" />
+    <Content Include="Content\images\icon-microsoft.png" />
+    <Content Include="Content\images\icon-twitter.png" />
     <Content Include="Content\images\jshint.png" />
     <Content Include="Content\images\kippt.png" />
     <Content Include="Content\images\less-logo-large.png" />

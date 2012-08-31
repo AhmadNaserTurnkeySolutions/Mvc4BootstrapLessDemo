@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   
-  @Styles.Render("~/bundles/jqueryui.css", "~/bundles/bootstrap.css", "~/bundles/default.css")
+  @Styles.Render("~/bundles/jqueryuicss", "~/bundles/css")
 
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,7 +31,7 @@
   
   @Html.Partial("_Footer")
 
-  @Scripts.Render("~/bundles/jquery.js","~/bundles/bootstrap.js", "~/bundles/default.js")
+  @Scripts.Render("~/bundles/jquery", "~/bundles/js")
   @RenderSection("scripts", false)
 </body>
 </html>
