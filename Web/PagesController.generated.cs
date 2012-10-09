@@ -96,6 +96,7 @@ namespace Mvc4BootstrapLessDemo.Controllers {
             public readonly string Scaffolding = "~/Views/Pages/Scaffolding.cshtml";
             static readonly _examples s_examples = new _examples();
             public _examples examples { get { return s_examples; } }
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
             public partial class _examples{
                 public readonly string Fluid = "~/Views/Pages/examples/Fluid.cshtml";
                 public readonly string Hero = "~/Views/Pages/examples/Hero.cshtml";

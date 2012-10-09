@@ -1,6 +1,6 @@
 ﻿<#
 /*
-T4MVC Version 2.10.1
+T4MVC Version 2.10.4
 Find latest version and documentation at http://mvccontrib.codeplex.com/wikipage?title=T4MVC
 Discuss on StackOverflow or on the MVC forum (http://forums.asp.net/1146.aspx)
 
@@ -284,9 +284,17 @@ namespace System.Web.Mvc {
             return result;
         }
 
-        public static ActionResult AddRouteValues(this ActionResult result, System.Collections.Specialized.NameValueCollection nameValueCollection) {
+        public static ActionResult AddRouteValues(this ActionResult result, System.Collections.Specialized.NameValueCollection nameValueCollection)
+        {
             // Copy all the values from the NameValueCollection into the route dictionary
-            nameValueCollection.CopyTo(result.GetRouteValueDictionary());
+            if (nameValueCollection.AllKeys.Any(m => m == null))  //if it has a null, the CopyTo extension will crash!
+            {
+                var filtered = new System.Collections.Specialized.NameValueCollection(nameValueCollection);
+                filtered.Remove(null);
+                filtered.CopyTo(result.GetRouteValueDictionary());
+            }
+            else
+                nameValueCollection.CopyTo(result.GetRouteValueDictionary());
             return result;
         }
 
@@ -381,6 +389,7 @@ RenderAdditionalCode();
 <#foreach (var controller in GetAbstractControllers().Where(c => !c.HasDefaultConstructor)) { #>
 <#manager.StartNewFile(controller.GeneratedFileName); #>
 namespace <#=controller.Namespace #> {
+    [<#= GeneratedCode #>, DebuggerNonUserCode]
     public partial class <#=controller.ClassName #> {
         protected <#=controller.ClassName #>() { }
     }
@@ -552,9 +561,6 @@ namespace System.Web.Mvc {
 <#  manager.EndBlock(); #>
 <#  }   #>
 
-<#manager.StartFooter(); #>
-#endregion T4MVC
-#pragma warning restore 1591
 <#if (GenerateMvcT4Extensions) { 
 manager.StartNewFile("T4MVC.ModelUnbinder.cs"); #>
 
@@ -568,8 +574,9 @@ namespace System.Web.Mvc {
     public interface IModelUnbinder<in T> where T : class {
         void UnbindModel(RouteValueDictionary routeValueDictionary, string routeName, T routeValue);
     }
-    [<#= GeneratedCode #>]
-        public class ModelUnbinders {
+    [<#= GeneratedCode #>, DebuggerNonUserCode]
+    public class ModelUnbinders {
+        [<#= GeneratedCode #>, DebuggerNonUserCode]
         private class GenericModelUnbinderWrapper<T> : IModelUnbinder where T : class {
             private readonly IModelUnbinder<T> _unbinder;
 
@@ -608,13 +615,13 @@ namespace System.Web.Mvc {
             _unbinders.Clear();
         }
     }
-    [<#= GeneratedCode #>]
+    [<#= GeneratedCode #>, DebuggerNonUserCode]
     public class DefaultModelUnbinder : IModelUnbinder {
         public void UnbindModel(RouteValueDictionary routeValueDictionary, string routeName, object routeValue) {
-            routeValueDictionary.Add(routeName, routeValue);
+            routeValueDictionary[routeName] = routeValue;
         }
     }
-    [<#= GeneratedCode #>]
+    [<#= GeneratedCode #>, DebuggerNonUserCode]
     public class PropertiesUnbinder : IModelUnbinder {
         public virtual void UnbindModel(RouteValueDictionary routeValueDictionary, string routeName, object routeValue) {
             var dict = new RouteValueDictionary(routeValue);
@@ -635,6 +642,7 @@ namespace System.Web.Mvc {
             }
         }
     }
+    [<#= GeneratedCode #>, DebuggerNonUserCode]
     public class ModelUnbinderHelpers {
         public static void AddRouteValues(RouteValueDictionary routeValueDictionary, string routeName, object routeValue) {
             IModelUnbinder unbinder = DefaultModelUnbinder;
@@ -659,8 +667,9 @@ namespace System.Web.Mvc {
     #endregion
 <#  manager.EndBlock(); #>
 <#  }   #>
-
-
+<#manager.StartFooter(); #>
+#endregion T4MVC
+#pragma warning restore 1591
 <#manager.EndBlock(); #>
 <#manager.Process(SplitIntoMultipleFiles); #>
 
@@ -1088,6 +1097,7 @@ void RenderViewsRecursive(ViewsFolderInfo viewsFolder, ControllerInfo controller
         }#>
 static readonly <#=className#> s_<#=name#> = new <#=className#>();
 public <#=className#> <#=EscapeID(name)#> { get { return s_<#=name#>; } }
+[<#= GeneratedCode #>, DebuggerNonUserCode]
 public partial class <#=className#>{
 <#+
 PushIndent("    ");

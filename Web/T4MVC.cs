@@ -224,9 +224,17 @@ namespace System.Web.Mvc {
             return result;
         }
 
-        public static ActionResult AddRouteValues(this ActionResult result, System.Collections.Specialized.NameValueCollection nameValueCollection) {
+        public static ActionResult AddRouteValues(this ActionResult result, System.Collections.Specialized.NameValueCollection nameValueCollection)
+        {
             // Copy all the values from the NameValueCollection into the route dictionary
-            nameValueCollection.CopyTo(result.GetRouteValueDictionary());
+            if (nameValueCollection.AllKeys.Any(m => m == null))  //if it has a null, the CopyTo extension will crash!
+            {
+                var filtered = new System.Collections.Specialized.NameValueCollection(nameValueCollection);
+                filtered.Remove(null);
+                filtered.CopyTo(result.GetRouteValueDictionary());
+            }
+            else
+                nameValueCollection.CopyTo(result.GetRouteValueDictionary());
             return result;
         }
 
@@ -313,14 +321,19 @@ namespace Links {
         public static readonly string bootstrap_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/bootstrap.min.js") ? Url("bootstrap.min.js") : Url("bootstrap.js");
                       
         public static readonly string bootstrap_min_js = Url("bootstrap.min.js");
-        public static readonly string jquery_1_8_0_intellisense_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-1.8.0.intellisense.min.js") ? Url("jquery-1.8.0.intellisense.min.js") : Url("jquery-1.8.0.intellisense.js");
-                      
         public static readonly string jquery_1_8_0_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-1.8.0.min.js") ? Url("jquery-1.8.0.min.js") : Url("jquery-1.8.0.js");
                       
-        public static readonly string jquery_1_8_0_min_js = Url("jquery-1.8.0.min.js");
+        public static readonly string jquery_1_8_2_intellisense_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-1.8.2.intellisense.min.js") ? Url("jquery-1.8.2.intellisense.min.js") : Url("jquery-1.8.2.intellisense.js");
+                      
+        public static readonly string jquery_1_8_2_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-1.8.2.min.js") ? Url("jquery-1.8.2.min.js") : Url("jquery-1.8.2.js");
+                      
+        public static readonly string jquery_1_8_2_min_js = Url("jquery-1.8.2.min.js");
         public static readonly string jquery_ui_1_8_23_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-ui-1.8.23.min.js") ? Url("jquery-ui-1.8.23.min.js") : Url("jquery-ui-1.8.23.js");
                       
         public static readonly string jquery_ui_1_8_23_min_js = Url("jquery-ui-1.8.23.min.js");
+        public static readonly string jquery_ui_1_8_24_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-ui-1.8.24.min.js") ? Url("jquery-ui-1.8.24.min.js") : Url("jquery-ui-1.8.24.js");
+                      
+        public static readonly string jquery_ui_1_8_24_min_js = Url("jquery-ui-1.8.24.min.js");
         public static readonly string jquery_unobtrusive_ajax_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery.unobtrusive-ajax.min.js") ? Url("jquery.unobtrusive-ajax.min.js") : Url("jquery.unobtrusive-ajax.js");
                       
         public static readonly string jquery_unobtrusive_ajax_min_js = Url("jquery.unobtrusive-ajax.min.js");
@@ -338,6 +351,8 @@ namespace Links {
                       
         public static readonly string less_min_js = Url("less.min.js");
         public static readonly string modernizr_2_5_3_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/modernizr-2.5.3.min.js") ? Url("modernizr-2.5.3.min.js") : Url("modernizr-2.5.3.js");
+                      
+        public static readonly string modernizr_2_6_2_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/modernizr-2.6.2.min.js") ? Url("modernizr-2.6.2.min.js") : Url("modernizr-2.6.2.js");
                       
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public static class Prettify {
@@ -416,6 +431,10 @@ namespace Links {
             public static readonly string fleetio_png = Url("fleetio.png");
             public static readonly string glyphicons_halflings_white_png = Url("glyphicons-halflings-white.png");
             public static readonly string glyphicons_halflings_png = Url("glyphicons-halflings.png");
+            public static readonly string icon_facebook_png = Url("icon-facebook.png");
+            public static readonly string icon_google_png = Url("icon-google.png");
+            public static readonly string icon_microsoft_png = Url("icon-microsoft.png");
+            public static readonly string icon_twitter_png = Url("icon-twitter.png");
             public static readonly string jshint_png = Url("jshint.png");
             public static readonly string kippt_png = Url("kippt.png");
             public static readonly string less_logo_large_png = Url("less-logo-large.png");
@@ -600,6 +619,7 @@ namespace Links {
 
 }
 
+[GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public static class T4MVCHelpers {
     // You can change the ProcessVirtualPath method to modify the path that gets returned to the client.
     // e.g. you can prepend a domain, or append a query string:
@@ -628,7 +648,5 @@ public static class T4MVCHelpers {
 
 #endregion T4MVC
 #pragma warning restore 1591
-
-
 
 

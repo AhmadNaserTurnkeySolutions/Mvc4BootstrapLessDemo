@@ -42,7 +42,6 @@
         "~/Content/Prettify/prettify.css",
         "~/Content/docs.css");
       defaultCss.Transforms.Add(new LessMinify());
-      //defaultCss.Transforms.Add(new CssMinify());
       bundles.Add(defaultCss);
 
       var defaultJs = new ScriptBundle("~/bundles/js").Include(
