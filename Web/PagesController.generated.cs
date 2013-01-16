@@ -20,8 +20,10 @@ using System.Web.Mvc.Ajax;
 using System.Web.Mvc.Html;
 using System.Web.Routing;
 using T4MVC;
-namespace Mvc4BootstrapLessDemo.Controllers {
-    public partial class PagesController {
+namespace Mvc4BootstrapLessDemo.Controllers
+{
+    public partial class PagesController
+    {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public PagesController() { }
 
@@ -29,13 +31,15 @@ namespace Mvc4BootstrapLessDemo.Controllers {
         protected PagesController(Dummy d) { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        protected RedirectToRouteResult RedirectToAction(ActionResult result) {
+        protected RedirectToRouteResult RedirectToAction(ActionResult result)
+        {
             var callInfo = result.GetT4MVCResult();
             return RedirectToRoute(callInfo.RouteValueDictionary);
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        protected RedirectToRouteResult RedirectToActionPermanent(ActionResult result) {
+        protected RedirectToRouteResult RedirectToActionPermanent(ActionResult result)
+        {
             var callInfo = result.GetT4MVCResult();
             return RedirectToRoutePermanent(callInfo.RouteValueDictionary);
         }
@@ -54,7 +58,8 @@ namespace Mvc4BootstrapLessDemo.Controllers {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ActionNamesClass ActionNames { get { return s_actions; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionNamesClass {
+        public class ActionNamesClass
+        {
             public readonly string GetStarted = "GetStarted";
             public readonly string Scaffolding = "Scaffolding";
             public readonly string BaseCss = "BaseCss";
@@ -68,7 +73,8 @@ namespace Mvc4BootstrapLessDemo.Controllers {
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionNameConstants {
+        public class ActionNameConstants
+        {
             public const string GetStarted = "GetStarted";
             public const string Scaffolding = "Scaffolding";
             public const string BaseCss = "BaseCss";
@@ -82,11 +88,24 @@ namespace Mvc4BootstrapLessDemo.Controllers {
         }
 
 
-        static readonly ViewNames s_views = new ViewNames();
+        static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ViewNames Views { get { return s_views; } }
+        public ViewsClass Views { get { return s_views; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ViewNames {
+        public class ViewsClass
+        {
+            static readonly _ViewNamesClass s_ViewNames = new _ViewNamesClass();
+            public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
+            public class _ViewNamesClass
+            {
+                public readonly string BaseCss = "BaseCss";
+                public readonly string Components = "Components";
+                public readonly string Customize = "Customize";
+                public readonly string Extend = "Extend";
+                public readonly string GetStarted = "GetStarted";
+                public readonly string Javascript = "Javascript";
+                public readonly string Scaffolding = "Scaffolding";
+            }
             public readonly string BaseCss = "~/Views/Pages/BaseCss.cshtml";
             public readonly string Components = "~/Views/Pages/Components.cshtml";
             public readonly string Customize = "~/Views/Pages/Customize.cshtml";
@@ -94,10 +113,19 @@ namespace Mvc4BootstrapLessDemo.Controllers {
             public readonly string GetStarted = "~/Views/Pages/GetStarted.cshtml";
             public readonly string Javascript = "~/Views/Pages/Javascript.cshtml";
             public readonly string Scaffolding = "~/Views/Pages/Scaffolding.cshtml";
-            static readonly _examples s_examples = new _examples();
-            public _examples examples { get { return s_examples; } }
+            static readonly _examplesClass s_examples = new _examplesClass();
+            public _examplesClass examples { get { return s_examples; } }
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-            public partial class _examples{
+            public partial class _examplesClass
+            {
+                static readonly _ViewNamesClass s_ViewNames = new _ViewNamesClass();
+                public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
+                public class _ViewNamesClass
+                {
+                    public readonly string Fluid = "Fluid";
+                    public readonly string Hero = "Hero";
+                    public readonly string Starter = "Starter";
+                }
                 public readonly string Fluid = "~/Views/Pages/examples/Fluid.cshtml";
                 public readonly string Hero = "~/Views/Pages/examples/Hero.cshtml";
                 public readonly string Starter = "~/Views/Pages/examples/Starter.cshtml";
@@ -106,56 +134,67 @@ namespace Mvc4BootstrapLessDemo.Controllers {
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public class T4MVC_PagesController: Mvc4BootstrapLessDemo.Controllers.PagesController {
+    public class T4MVC_PagesController : Mvc4BootstrapLessDemo.Controllers.PagesController
+    {
         public T4MVC_PagesController() : base(Dummy.Instance) { }
 
-        public override System.Web.Mvc.ActionResult GetStarted() {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.GetStarted);
+        public override System.Web.Mvc.ActionResult GetStarted()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetStarted);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult Scaffolding() {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Scaffolding);
+        public override System.Web.Mvc.ActionResult Scaffolding()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Scaffolding);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult BaseCss() {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.BaseCss);
+        public override System.Web.Mvc.ActionResult BaseCss()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.BaseCss);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult Components() {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Components);
+        public override System.Web.Mvc.ActionResult Components()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Components);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult Javascript() {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Javascript);
+        public override System.Web.Mvc.ActionResult Javascript()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Javascript);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult Customize() {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Customize);
+        public override System.Web.Mvc.ActionResult Customize()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Customize);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult Extend() {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Extend);
+        public override System.Web.Mvc.ActionResult Extend()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Extend);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult Hero() {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Hero);
+        public override System.Web.Mvc.ActionResult Hero()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Hero);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult Fluid() {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Fluid);
+        public override System.Web.Mvc.ActionResult Fluid()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Fluid);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult Starter() {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Starter);
+        public override System.Web.Mvc.ActionResult Starter()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Starter);
             return callInfo;
         }
 
