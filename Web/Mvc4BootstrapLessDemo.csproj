@@ -418,7 +418,9 @@
     <Content Include="Scripts\Prettify\prettify.js" />
     <None Include="T4MVC.tt.settings.xml" />
     <Content Include="Scripts\Prettify\run_prettify.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

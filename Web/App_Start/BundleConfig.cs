@@ -33,8 +33,8 @@ namespace Mvc4BootstrapLessDemo
       bundles.Add(jqueryUiCss);
 
       var jq = new Bundle("~/bundles/jquery").Include(
-        "~/Scripts/jquery-{version}",
-        "~/Scripts/jquery-ui-{version}");
+        "~/Scripts/jquery-{version}.js",
+        "~/Scripts/jquery-ui-{version}.js");
       jq.Transforms.Add(jsTransformer);
       jq.Orderer = nullOrderer;
       bundles.Add(jq);
