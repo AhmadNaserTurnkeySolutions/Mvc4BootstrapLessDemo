@@ -134,67 +134,97 @@ namespace Mvc4BootstrapLessDemo.Controllers
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public class T4MVC_PagesController : Mvc4BootstrapLessDemo.Controllers.PagesController
+    public partial class T4MVC_PagesController : Mvc4BootstrapLessDemo.Controllers.PagesController
     {
         public T4MVC_PagesController() : base(Dummy.Instance) { }
+
+        partial void GetStartedOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult GetStarted()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetStarted);
+            GetStartedOverride(callInfo);
             return callInfo;
         }
+
+        partial void ScaffoldingOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult Scaffolding()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Scaffolding);
+            ScaffoldingOverride(callInfo);
             return callInfo;
         }
+
+        partial void BaseCssOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult BaseCss()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.BaseCss);
+            BaseCssOverride(callInfo);
             return callInfo;
         }
+
+        partial void ComponentsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult Components()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Components);
+            ComponentsOverride(callInfo);
             return callInfo;
         }
+
+        partial void JavascriptOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult Javascript()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Javascript);
+            JavascriptOverride(callInfo);
             return callInfo;
         }
+
+        partial void CustomizeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult Customize()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Customize);
+            CustomizeOverride(callInfo);
             return callInfo;
         }
+
+        partial void ExtendOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult Extend()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Extend);
+            ExtendOverride(callInfo);
             return callInfo;
         }
+
+        partial void HeroOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult Hero()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Hero);
+            HeroOverride(callInfo);
             return callInfo;
         }
+
+        partial void FluidOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult Fluid()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Fluid);
+            FluidOverride(callInfo);
             return callInfo;
         }
+
+        partial void StarterOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult Starter()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Starter);
+            StarterOverride(callInfo);
             return callInfo;
         }
 

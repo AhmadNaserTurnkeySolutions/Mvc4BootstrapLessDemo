@@ -46,43 +46,43 @@ namespace Mvc4BootstrapLessDemo.Controllers
 
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public System.Web.Mvc.ActionResult Login()
+        public virtual System.Web.Mvc.ActionResult Login()
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
         }
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public System.Web.Mvc.ActionResult Disassociate()
+        public virtual System.Web.Mvc.ActionResult Disassociate()
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Disassociate);
         }
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public System.Web.Mvc.ActionResult Manage()
+        public virtual System.Web.Mvc.ActionResult Manage()
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Manage);
         }
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public System.Web.Mvc.ActionResult ExternalLogin()
+        public virtual System.Web.Mvc.ActionResult ExternalLogin()
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLogin);
         }
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public System.Web.Mvc.ActionResult ExternalLoginCallback()
+        public virtual System.Web.Mvc.ActionResult ExternalLoginCallback()
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginCallback);
         }
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public System.Web.Mvc.ActionResult ExternalLoginConfirmation()
+        public virtual System.Web.Mvc.ActionResult ExternalLoginConfirmation()
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginConfirmation);
         }
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public System.Web.Mvc.ActionResult ExternalLoginsList()
+        public virtual System.Web.Mvc.ActionResult ExternalLoginsList()
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginsList);
         }
@@ -234,105 +234,147 @@ namespace Mvc4BootstrapLessDemo.Controllers
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public class T4MVC_AccountController : Mvc4BootstrapLessDemo.Controllers.AccountController
+    public partial class T4MVC_AccountController : Mvc4BootstrapLessDemo.Controllers.AccountController
     {
         public T4MVC_AccountController() : base(Dummy.Instance) { }
+
+        partial void LoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string returnUrl);
 
         public override System.Web.Mvc.ActionResult Login(string returnUrl)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            LoginOverride(callInfo, returnUrl);
             return callInfo;
         }
+
+        partial void LoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Mvc4BootstrapLessDemo.Models.LoginModel model, string returnUrl);
 
         public override System.Web.Mvc.ActionResult Login(Mvc4BootstrapLessDemo.Models.LoginModel model, string returnUrl)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            LoginOverride(callInfo, model, returnUrl);
             return callInfo;
         }
+
+        partial void LogOffOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult LogOff()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.LogOff);
+            LogOffOverride(callInfo);
             return callInfo;
         }
+
+        partial void RegisterOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult Register()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Register);
+            RegisterOverride(callInfo);
             return callInfo;
         }
+
+        partial void RegisterOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Mvc4BootstrapLessDemo.Models.RegisterModel model);
 
         public override System.Web.Mvc.ActionResult Register(Mvc4BootstrapLessDemo.Models.RegisterModel model)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Register);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
+            RegisterOverride(callInfo, model);
             return callInfo;
         }
+
+        partial void DisassociateOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string provider, string providerUserId);
 
         public override System.Web.Mvc.ActionResult Disassociate(string provider, string providerUserId)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Disassociate);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "provider", provider);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "providerUserId", providerUserId);
+            DisassociateOverride(callInfo, provider, providerUserId);
             return callInfo;
         }
+
+        partial void ManageOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Mvc4BootstrapLessDemo.Controllers.AccountController.ManageMessageId? message);
 
         public override System.Web.Mvc.ActionResult Manage(Mvc4BootstrapLessDemo.Controllers.AccountController.ManageMessageId? message)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Manage);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "message", message);
+            ManageOverride(callInfo, message);
             return callInfo;
         }
+
+        partial void ManageOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Mvc4BootstrapLessDemo.Models.LocalPasswordModel model);
 
         public override System.Web.Mvc.ActionResult Manage(Mvc4BootstrapLessDemo.Models.LocalPasswordModel model)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Manage);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
+            ManageOverride(callInfo, model);
             return callInfo;
         }
+
+        partial void ExternalLoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string provider, string returnUrl);
 
         public override System.Web.Mvc.ActionResult ExternalLogin(string provider, string returnUrl)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLogin);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "provider", provider);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            ExternalLoginOverride(callInfo, provider, returnUrl);
             return callInfo;
         }
+
+        partial void ExternalLoginCallbackOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string returnUrl);
 
         public override System.Web.Mvc.ActionResult ExternalLoginCallback(string returnUrl)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginCallback);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            ExternalLoginCallbackOverride(callInfo, returnUrl);
             return callInfo;
         }
+
+        partial void ExternalLoginConfirmationOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Mvc4BootstrapLessDemo.Models.RegisterExternalLoginModel model, string returnUrl);
 
         public override System.Web.Mvc.ActionResult ExternalLoginConfirmation(Mvc4BootstrapLessDemo.Models.RegisterExternalLoginModel model, string returnUrl)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginConfirmation);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            ExternalLoginConfirmationOverride(callInfo, model, returnUrl);
             return callInfo;
         }
+
+        partial void ExternalLoginFailureOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult ExternalLoginFailure()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginFailure);
+            ExternalLoginFailureOverride(callInfo);
             return callInfo;
         }
+
+        partial void ExternalLoginsListOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string returnUrl);
 
         public override System.Web.Mvc.ActionResult ExternalLoginsList(string returnUrl)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginsList);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            ExternalLoginsListOverride(callInfo, returnUrl);
             return callInfo;
         }
+
+        partial void RemoveExternalLoginsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         public override System.Web.Mvc.ActionResult RemoveExternalLogins()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.RemoveExternalLogins);
+            RemoveExternalLoginsOverride(callInfo);
             return callInfo;
         }
 
