@@ -44,32 +44,40 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="BundleTransformer.Core">
-      <HintPath>..\packages\BundleTransformer.Core.1.6.14\lib\net40\BundleTransformer.Core.dll</HintPath>
+    <Reference Include="BundleTransformer.Core, Version=1.6.22.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\BundleTransformer.Core.1.6.22\lib\net40\BundleTransformer.Core.dll</HintPath>
     </Reference>
-    <Reference Include="BundleTransformer.Less">
-      <HintPath>..\packages\BundleTransformer.Less.1.6.14\lib\net40\BundleTransformer.Less.dll</HintPath>
+    <Reference Include="BundleTransformer.Less, Version=1.6.19.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\BundleTransformer.Less.1.6.19\lib\net40\BundleTransformer.Less.dll</HintPath>
     </Reference>
     <Reference Include="dotless.Core">
       <HintPath>..\packages\dotless.1.3.1.0\lib\dotless.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetOpenAuth.AspNet">
-      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.0.12182\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.2.2.13055\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetOpenAuth.Core">
-      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.0.12182\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.2.2.13055\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetOpenAuth.OAuth">
-      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.0.12182\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.2.2.13055\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetOpenAuth.OAuth.Consumer">
-      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.0.12182\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.2.2.13055\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetOpenAuth.OpenId">
-      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.0.12182\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.2.2.13055\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty">
-      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.0.12182\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.2.2.13055\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
@@ -151,8 +159,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="T4MVCExtensions">
-      <HintPath>..\packages\T4MVCExtensions.3.2.1\lib\net40\T4MVCExtensions.dll</HintPath>
+    <Reference Include="T4MVCExtensions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\T4MVCExtensions.3.5.1\lib\net40\T4MVCExtensions.dll</HintPath>
     </Reference>
     <Reference Include="WebActivator">
       <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
@@ -239,8 +248,10 @@
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\Prettify\prettify.css" />
     <Content Include="Content\Prettify\Themes\desert.css" />
+    <Content Include="Content\Prettify\Themes\doxy.css" />
     <Content Include="Content\Prettify\Themes\sons-of-obsidian.css" />
     <Content Include="Content\Prettify\Themes\sunburst.css" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -272,6 +283,7 @@
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -349,9 +361,11 @@
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.0.js" />
-    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.0.js" />
+    <Content Include="Scripts\jquery-ui-1.10.0.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.23.js" />
     <Content Include="Scripts\jquery-ui-1.8.23.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -360,6 +374,7 @@
     <Content Include="Scripts\jquery-ui-1.9.2.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -374,17 +389,26 @@
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Prettify\lang-apollo.js" />
+    <Content Include="Scripts\Prettify\lang-basic.js" />
     <Content Include="Scripts\Prettify\lang-clj.js" />
     <Content Include="Scripts\Prettify\lang-css.js" />
+    <Content Include="Scripts\Prettify\lang-dart.js" />
+    <Content Include="Scripts\Prettify\lang-erlang.js" />
     <Content Include="Scripts\Prettify\lang-go.js" />
     <Content Include="Scripts\Prettify\lang-hs.js" />
     <Content Include="Scripts\Prettify\lang-lisp.js" />
+    <Content Include="Scripts\Prettify\lang-llvm.js" />
     <Content Include="Scripts\Prettify\lang-lua.js" />
     <Content Include="Scripts\Prettify\lang-ml.js" />
+    <Content Include="Scripts\Prettify\lang-mumps.js" />
     <Content Include="Scripts\Prettify\lang-n.js" />
+    <Content Include="Scripts\Prettify\lang-pascal.js" />
     <Content Include="Scripts\Prettify\lang-proto.js" />
+    <Content Include="Scripts\Prettify\lang-r.js" />
+    <Content Include="Scripts\Prettify\lang-rd.js" />
     <Content Include="Scripts\Prettify\lang-scala.js" />
     <Content Include="Scripts\Prettify\lang-sql.js" />
+    <Content Include="Scripts\Prettify\lang-tcl.js" />
     <Content Include="Scripts\Prettify\lang-tex.js" />
     <Content Include="Scripts\Prettify\lang-vb.js" />
     <Content Include="Scripts\Prettify\lang-vhdl.js" />
@@ -392,7 +416,8 @@
     <Content Include="Scripts\Prettify\lang-xq.js" />
     <Content Include="Scripts\Prettify\lang-yaml.js" />
     <Content Include="Scripts\Prettify\prettify.js" />
-    <Content Include="T4MVC.tt.settings.xml" />
+    <None Include="T4MVC.tt.settings.xml" />
+    <Content Include="Scripts\Prettify\run_prettify.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
